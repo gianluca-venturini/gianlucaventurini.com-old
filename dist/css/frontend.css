@@ -1,3 +1,4 @@
+@import url(http://fonts.googleapis.com/css?family=Montserrat);
 /*! normalize.css v3.0.2 | MIT License | git.io/normalize */
 html {
   font-family: sans-serif;
@@ -1072,10 +1073,10 @@ html {
   -webkit-tap-highlight-color: rgba(0, 0, 0, 0);
 }
 body {
-  font-family: "Helvetica Neue", Helvetica, Arial, sans-serif;
+  font-family: "Montserrat", "Helvetica Neue", Helvetica, Arial, sans-serif;
   font-size: 14px;
   line-height: 1.42857143;
-  color: #333333;
+  color: #1a1f2b;
   background-color: #ffffff;
 }
 input,
@@ -1568,17 +1569,17 @@ pre code {
 }
 @media (min-width: 768px) {
   .container {
-    width: 750px;
+    width: 100%;
   }
 }
 @media (min-width: 992px) {
   .container {
-    width: 970px;
+    width: 100%;
   }
 }
 @media (min-width: 1200px) {
   .container {
-    width: 1170px;
+    width: 100%;
   }
 }
 .container-fluid {
@@ -2882,7 +2883,7 @@ select[multiple].form-group-lg .form-control {
   display: block;
   margin-top: 5px;
   margin-bottom: 10px;
-  color: #737373;
+  color: #4a587a;
 }
 @media (min-width: 768px) {
   .form-inline .form-group {
@@ -4894,7 +4895,7 @@ a.thumbnail.active {
 }
 .thumbnail .caption {
   padding: 9px;
-  color: #333333;
+  color: #1a1f2b;
 }
 .alert {
   padding: 15px;
@@ -5811,7 +5812,7 @@ button.close {
   position: absolute;
   z-index: 1070;
   display: block;
-  font-family: "Helvetica Neue", Helvetica, Arial, sans-serif;
+  font-family: "Montserrat", "Helvetica Neue", Helvetica, Arial, sans-serif;
   font-size: 12px;
   font-weight: normal;
   line-height: 1.4;
@@ -5918,7 +5919,7 @@ button.close {
   display: none;
   max-width: 276px;
   padding: 1px;
-  font-family: "Helvetica Neue", Helvetica, Arial, sans-serif;
+  font-family: "Montserrat", "Helvetica Neue", Helvetica, Arial, sans-serif;
   font-size: 14px;
   font-weight: normal;
   line-height: 1.42857143;
@@ -6546,4 +6547,60 @@ button.close {
   .hidden-print {
     display: none !important;
   }
+}
+div.header {
+  height: 400px;
+  background-image: url("../img/mountain1.jpg");
+  background-color: #000000;
+  padding: 10px;
+}
+@media screen and (max-width: 653px) {
+  div.header {
+    background-size: auto 100%;
+  }
+}
+@media screen and (min-width: 654px) {
+  div.header {
+    background-size: 100% auto;
+  }
+}
+h1.site-title {
+  margin-top: 160px;
+}
+h1.site-title {
+  text-align: center;
+  font-size: 36px;
+  line-height: 44px;
+  letter-spacing: 11px;
+}
+div.section {
+  padding: 30px 30px 60px 30px;
+}
+div.title-separator {
+  position: relative;
+  left: 50%;
+  margin-left: -40px;
+  margin-top: 20px;
+  width: 80px;
+  height: 3px;
+  border-radius: 1px;
+  z-index: 2;
+}
+.title-separator {
+  background: #1A1F2B;
+}
+h2 {
+  font-size: 20px!important;
+  line-height: 24px!important;
+  letter-spacing: 3px!important;
+  text-align: center!important;
+  font-weight: normal!important;
+}
+div.about {
+  background-color: #e1ebf2;
+}
+.about p {
+  margin-top: 50px;
+  margin-left: 30px;
+  margin-right: 30px;
 }

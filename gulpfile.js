@@ -2,23 +2,28 @@
 
 // --- INIT
 var gulp = require('gulp'),
-    less = require('gulp-less'), // compiles less to CSS
-    sass = require('gulp-sass'), // compiles sass to CSS
-    minify = require('gulp-minify-css'), // minifies CSS
+    less = require('gulp-less'),              // compiles less to CSS
+    sass = require('gulp-sass'),              // compiles sass to CSS
+    minifyCSS = require('gulp-minify-css'),   // minifies CSS
+    minifyHTML = require('gulp-minify-html'), // minifies HTML
     concat = require('gulp-concat'),
-    uglify = require('gulp-uglify'), // minifies JS
+    uglify = require('gulp-uglify'),          // minifies JS
     rename = require('gulp-rename'),
-    phpunit = require('gulp-phpunit');
+    filesize = require('gulp-filesize'),
+    changed = require('gulp-changed'),
+    util = require('gulp-util');
 
 var path = {
     'dist': {
         css: "./dist/css/",
         vendor: "./dist/bower_vendor/",
-        js: "./dist/js/"
+        js: "./dist/js/",
+        html: "./dist/"
     },
     'src': {
         less: "./src/less/",
-        js: "./src/js/"
+        js: "./src/js/",
+        html: "./src/*.html"
     }
 };
 
@@ -27,9 +32,11 @@ gulp.task('frontend.css', function() {
     // place code for your default task here
     return gulp.src(path.src.less+'frontend.less') // get file
         .pipe(less())
+        .on('error', swallowError)
         .pipe(gulp.dest(path.dist.css)) // output: frontend.css
-        .pipe(minify({keepSpecialComments:0}))
+        .pipe(minifyCSS({keepSpecialComments:0}))
         .pipe(rename({suffix: '.min'}))
+        .on('error', swallowError)
         .pipe(gulp.dest(path.dist.css)); // output: frontend.min.css
 });
 
@@ -40,14 +47,36 @@ gulp.task('frontend.js', function(){
             path.dist.vendor+'bootstrap/dist/js/bootstrap.js',
             path.src.js+'frontend.js'
         ])
-        .pipe(concat('frontend.min.js'))
+        .pipe(changed(path.dist.js))
         .pipe(uglify())
-        .pipe(gulp.dest(path.dist.js));
+        .on('error', swallowError)
+        .pipe(concat('frontend.min.js'))
+        .pipe(gulp.dest(path.dist.js))
+        .pipe(filesize());
+});
+
+// HTML frontend
+gulp.task('frontend.html', function(){
+    var opts = {};
+
+    return gulp.src(path.src.html)
+        .pipe(minifyHTML(opts))
+        .on('error', swallowError)
+        .pipe(gulp.dest(path.dist.html));
 });
 
 gulp.task('watch', function(){
-    gulp.watch(path.src.less+"*", ['frontend.css']);
-    gulp.watch(path.src.js+"*", ['frontend.js']);
+    gulp.watch(path.src.less+"**/*", ['frontend.css']);
+    gulp.watch(path.src.js+"**/*", ['frontend.js']);
+    gulp.watch(path.src.html, ['frontend.html']);
 });
 
-gulp.task('default', ['frontend.css', 'frontend.js', 'watch']);
+function swallowError (error) {
+    // Errors in console
+    //util.log(util.colors.red('Error'), error.toString());
+    console.log(error.toString());
+
+    this.emit('end');
+}
+
+gulp.task('default', ['frontend.css', 'frontend.js', 'frontend.html', 'watch']);
