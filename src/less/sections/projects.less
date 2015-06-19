@@ -1,0 +1,35 @@
+div.projects {
+  background-color: @background_dark;
+}
+
+h3.project-title {
+  .generic-title(14px);
+
+  margin-top: 0px;
+}
+
+div.project-separator {
+  position: relative;
+  left: 50%;
+  margin-left: -40%;
+  margin-top: 20px;
+  width: 80%;
+  height: 1px;
+  border-radius: 1px;
+  z-index: 2;
+}
+
+.project-separator  {
+  background: @dark_blue_light;
+}
+
+div.project {
+  margin-top: 120px;
+  margin-bottom: 240px;
+}
+
+@media screen and (max-width: 767px) {
+  div.project-image-container {
+    padding: 20%;
+  }
+}

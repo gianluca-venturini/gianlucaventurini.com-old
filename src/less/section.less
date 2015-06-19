@@ -5,17 +5,35 @@ div.section {
 div.title-separator {
   position: relative;
   left: 50%;
-  margin-left: -40px;
+  margin-left: -30px;
   margin-top: 20px;
-  width: 80px;
+  width: 60px;
   height: 3px;
   border-radius: 1px;
   z-index: 2;
 }
 
 .title-separator {
-  background: #1A1F2B;
+  background: @dark_blue;
 }
 
-@background_light: #e1ebf2;
-@background_dark: #D0E4F2;
+// Titles
+.generic-title(@font-size) {
+  font-size: @font-size!important;
+  line-height: 24px!important;
+  letter-spacing: 3px!important;
+  text-align: center!important;
+  font-weight: normal!important;
+}
+
+h2 {
+  .generic-title(16px);
+
+  margin-top: 40px;
+}
+
+/*
+p {
+  font-size: 1.3rem;
+}
+*/
