@@ -1,7 +1,10 @@
+{% import './project.html' as project %}
+
 <!DOCTYPE html>
 <html>
 <head lang="en">
     <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, user-scalable=no" />
 
     <!-- Bootstrap -->
     <link href="css/frontend.min.css" rel="stylesheet">
@@ -29,55 +32,12 @@
                 <h2>MY WORK</h2>
                 <div class="title-separator"></div>
 
-                <div class="row project">
-                    <div class="col-md-4 col-md-offset-2 col-sm-4 col-sm-offset-2">
-                        <h3 class="project-title">TITLE</h3>
-                        <p class="project-description">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Quisque eu suscipit nulla. Etiam vitae vestibulum nisi, a lobortis lorem. Morbi non convallis sapien, pellentesque porttitor nis</p>
-                    </div>
-
-                    <div class="col-md-4 col-sm-4 project-image-container">
-                        <img src="img/macbook-silver.png" class="img-responsive" alt="Macbook silver">
-                    </div>
-                </div>
-
-                <div class="project-separator"></div>
-
-                <div class="row project">
-                    <div class="col-md-4 col-md-offset-2 col-md-push-4 col-sm-4 col-sm-offset-2 col-sm-push-4">
-                        <h3 class="project-title">TITLE</h3>
-                        <p class="project-description">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Quisque eu suscipit nulla. Etiam vitae vestibulum nisi, a lobortis lorem. Morbi non convallis sapien, pellentesque porttitor nis</p>
-                    </div>
-
-                    <div class="col-md-4 col-md-pull-4 col-sm-4 col-sm-pull-4 project-image-container ">
-                        <img src="img/macbook-silver.png" class="img-responsive" alt="Macbook silver">
-                    </div>
-                </div>
-
-                <div class="project-separator"></div>
-
-                <div class="row project">
-                    <div class="col-md-4 col-md-offset-2 col-sm-4 col-sm-offset-2">
-                        <h3 class="project-title">TITLE</h3>
-                        <p class="project-description">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Quisque eu suscipit nulla. Etiam vitae vestibulum nisi, a lobortis lorem. Morbi non convallis sapien, pellentesque porttitor nis</p>
-                    </div>
-
-                    <div class="col-md-4 col-sm-4 project-image-container">
-                        <img src="img/macbook-silver.png" class="img-responsive" alt="Macbook silver">
-                    </div>
-                </div>
-
-                <div class="project-separator"></div>
-
-                <div class="row project">
-                    <div class="col-md-4 col-md-offset-2 col-md-push-4 col-sm-4 col-sm-offset-2 col-sm-push-4">
-                        <h3 class="project-title">TITLE</h3>
-                        <p class="project-description">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Quisque eu suscipit nulla. Etiam vitae vestibulum nisi, a lobortis lorem. Morbi non convallis sapien, pellentesque porttitor nis</p>
-                    </div>
-
-                    <div class="col-md-4 col-md-pull-4 col-sm-4 col-sm-pull-4 project-image-container ">
-                        <img src="img/macbook-silver.png" class="img-responsive" alt="Macbook silver">
-                    </div>
-                </div>
+                {{ project.new("SWEET HOME CHICAGO", "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Quisque eu suscipit nulla. Etiam vitae vestibulum nisi, a lobortis lorem. Morbi non convallis sapien, pellentesque porttitor nis", "Full Stack Developer", "sweet-home-chicago.png", false, true) }}
+                {{ project.new("TITLE", "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Quisque eu suscipit nulla. Etiam vitae vestibulum nisi, a lobortis lorem. Morbi non convallis sapien, pellentesque porttitor nis", "Project Role", "macbook-silver.png", true, false) }}
+                {{ project.new("TITLE", "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Quisque eu suscipit nulla. Etiam vitae vestibulum nisi, a lobortis lorem. Morbi non convallis sapien, pellentesque porttitor nis", "Project Role", "macbook-silver.png", true, true) }}
+                {{ project.new("TITLE", "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Quisque eu suscipit nulla. Etiam vitae vestibulum nisi, a lobortis lorem. Morbi non convallis sapien, pellentesque porttitor nis", "Project Role", "macbook-silver.png", true, false) }}
+                {{ project.new("TITLE", "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Quisque eu suscipit nulla. Etiam vitae vestibulum nisi, a lobortis lorem. Morbi non convallis sapien, pellentesque porttitor nis", "Project Role", "macbook-silver.png", true, true) }}
+                {{ project.new("TITLE", "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Quisque eu suscipit nulla. Etiam vitae vestibulum nisi, a lobortis lorem. Morbi non convallis sapien, pellentesque porttitor nis", "Project Role", "macbook-silver.png", true, false) }}
 
             </div>
         </div>

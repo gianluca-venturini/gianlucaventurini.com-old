@@ -2,6 +2,37 @@
 html {
   -webkit-font-smoothing: antialiased;
 }
+button.btn-flat {
+  background-color: transparent;
+  border-color: #1a1f2b;
+  border-style: solid;
+  border-width: 4px;
+  border-radius: 0;
+  height: 30px;
+  padding: 1px 12px 1px 12px;
+  font-size: 12px;
+  color: #1a1f2b;
+}
+button.btn-margin {
+  margin-top: 40px;
+}
+button.btn-center {
+  display: block;
+  margin-left: auto;
+  margin-right: auto;
+}
+button.btn-color-hover {
+  transition: background-color 0.5s ease;
+  background-color: transparent;
+}
+button.btn-color-hover:hover {
+  transition: background-color 2s ease;
+  background-color: #79c0f2;
+  color: #1a1f2b;
+}
+a {
+  text-decoration: none!important;
+}
 /*! normalize.css v3.0.2 | MIT License | git.io/normalize */
 html {
   font-family: sans-serif;
@@ -6632,6 +6663,17 @@ h3.project-title {
   font-weight: normal!important;
   margin-top: 0px;
 }
+h4.project-role {
+  font-size: 12px !important;
+  line-height: 24px!important;
+  letter-spacing: 3px!important;
+  text-align: center!important;
+  font-weight: normal!important;
+  letter-spacing: 0!important;
+  text-align: left!important;
+  font-weight: bold!important;
+  margin-top: 0px;
+}
 div.project-separator {
   position: relative;
   left: 50%;
@@ -6644,6 +6686,9 @@ div.project-separator {
 }
 .project-separator {
   background: #919fad;
+}
+p.project-description {
+  font-size: 12px;
 }
 div.project {
   margin-top: 120px;
