@@ -1,0 +1,14 @@
+{% macro project(title, description, image_path) %}
+
+<div class="row project">
+    <div class="col-md-4 col-md-offset-2 col-md-push-4 col-sm-4 col-sm-offset-2 col-sm-push-4">
+        <h3 class="project-title">{{title}}</h3>
+        <p class="project-description">{{description}}</p>
+    </div>
+
+    <div class="col-md-4 col-md-pull-4 col-sm-4 col-sm-pull-4 project-image-container ">
+        <img src="img/macbook-silver.png" class="img-responsive" alt="Macbook silver">
+    </div>
+</div>
+
+{% endmacro %}

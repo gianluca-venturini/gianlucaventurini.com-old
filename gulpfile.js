@@ -18,12 +18,12 @@ var path = {
         css: "./dist/css/",
         vendor: "./dist/bower_vendor/",
         js: "./dist/js/",
-        html: "./dist/"
+        html: "./dist/view/"
     },
     'src': {
         less: "./src/less/",
         js: "./src/js/",
-        html: "./src/*.html"
+        html: "./src/view/*.html"
     }
 };
 
