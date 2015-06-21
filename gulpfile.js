@@ -45,9 +45,8 @@ gulp.task('frontend.js', function(){
     return gulp.src([
             path.dist.vendor+'jquery/dist/jquery.js',
             path.dist.vendor+'bootstrap/dist/js/bootstrap.js',
-            path.src.js+'frontend.js'
+            path.src.js+'*.js'
         ])
-        .pipe(changed(path.dist.js))
         .pipe(uglify())
         .on('error', swallowError)
         .pipe(concat('frontend.min.js'))

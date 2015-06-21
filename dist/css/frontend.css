@@ -13,6 +13,17 @@ button.btn-flat {
   font-size: 12px;
   color: #1a1f2b;
 }
+button.btn-flat-big {
+  background-color: transparent;
+  border-color: #e1ebf2;
+  border-style: solid;
+  border-width: 4px;
+  border-radius: 0;
+  height: 60px;
+  padding: 1px 24px 1px 24px;
+  font-size: 12px;
+  color: #e1ebf2;
+}
 button.btn-margin {
   margin-top: 40px;
 }
@@ -22,11 +33,11 @@ button.btn-center {
   margin-right: auto;
 }
 button.btn-color-hover {
-  transition: background-color 0.5s ease;
+  transition: background-color 0.5s ease, color 2s ease;
   background-color: transparent;
 }
 button.btn-color-hover:hover {
-  transition: background-color 2s ease;
+  transition: background-color 2s ease, color 2s ease;
   background-color: #79c0f2;
   color: #1a1f2b;
 }
@@ -6698,4 +6709,11 @@ div.project {
   div.project-image-container {
     padding: 20%;
   }
+}
+div.contact {
+  background-color: #1a1f2b;
+  height: 400px;
+}
+button.btn-contact {
+  margin-top: 140px;
 }

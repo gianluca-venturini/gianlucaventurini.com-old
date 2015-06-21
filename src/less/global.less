@@ -4,8 +4,11 @@ html {
 
 // Colors
 
-@background_light: #E1EBF2;
-@background_dark: #D0E4F2;
+@light_blue: #E1EBF2;
+@light_dark_blue: #D0E4F2;
+
+@background_light: @light_blue;
+@background_dark: @light_dark_blue;
 
 @background_dark_saturated: #79c0f2;
 
@@ -33,6 +36,24 @@ button.btn-flat {
   color: @dark_blue;
 }
 
+button.btn-flat-big {
+  background-color: transparent;
+
+  // Border
+  border-color: @light_blue;
+  border-style: solid;
+  border-width: 4px;
+  border-radius: 0;
+
+  // Height
+  height: 60px;
+  padding: 1px 24px 1px 24px;
+
+  // Font
+  font-size: 12px;
+  color: @light_blue;
+}
+
 button.btn-margin {
   margin-top: 40px;
 }
@@ -44,12 +65,14 @@ button.btn-center {
 }
 
 button.btn-color-hover {
-  transition: background-color 0.5s ease;
+  transition: background-color 0.5s ease,
+              color 2s ease;
   background-color: transparent;
 }
 
 button.btn-color-hover:hover {
-  transition: background-color 2s ease;
+  transition: background-color 2s ease,
+              color 2s ease;
   background-color: @background_dark_saturated;
 
   color: @dark_blue;
