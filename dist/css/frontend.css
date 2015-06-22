@@ -8,8 +8,7 @@ button.btn-flat {
   border-style: solid;
   border-width: 4px;
   border-radius: 0;
-  height: 30px;
-  padding: 1px 12px 1px 12px;
+  padding: 10px;
   font-size: 12px;
   color: #1a1f2b;
 }
@@ -6712,8 +6711,11 @@ div.project {
 }
 div.contact {
   background-color: #1a1f2b;
-  height: 400px;
+  height: 500px;
 }
 button.btn-contact {
   margin-top: 140px;
+}
+.social {
+  font-size: 30px;
 }

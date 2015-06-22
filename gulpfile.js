@@ -16,14 +16,16 @@ var gulp = require('gulp'),
 var path = {
     'dist': {
         css: "./dist/css/",
-        vendor: "./dist/bower_vendor/",
         js: "./dist/js/",
-        html: "./dist/view/"
+        html: "./dist/view/",
+        font: "./dist/font/"
     },
     'src': {
         less: "./src/less/",
         js: "./src/js/",
-        html: "./src/view/*.html"
+        html: "./src/view/*.html",
+        vendor: "./src/bower_vendor/",
+        font_entypo: "./src/bower_vendor/entypo/font/"
     }
 };
 
@@ -43,8 +45,8 @@ gulp.task('frontend.css', function() {
 // JS frontend
 gulp.task('frontend.js', function(){
     return gulp.src([
-            path.dist.vendor+'jquery/dist/jquery.js',
-            path.dist.vendor+'bootstrap/dist/js/bootstrap.js',
+            path.src.vendor+'jquery/dist/jquery.js',
+            path.src.vendor+'bootstrap/dist/js/bootstrap.js',
             path.src.js+'*.js'
         ])
         .pipe(uglify())
@@ -64,10 +66,24 @@ gulp.task('frontend.html', function(){
         .pipe(gulp.dest(path.dist.html));
 });
 
+// FONT frontend
+gulp.task('frontend.font', function(){
+    return gulp.src([
+        path.src.font_entypo+"*.eot",
+        path.src.font_entypo+"*.svg",
+        path.src.font_entypo+"*.ttf",
+        path.src.font_entypo+"*.woff",
+        path.src.font_entypo+"*.css"
+    ])
+    .pipe(gulp.dest(path.dist.font))
+    .pipe(filesize());
+});
+
 gulp.task('watch', function(){
     gulp.watch(path.src.less+"**/*", ['frontend.css']);
     gulp.watch(path.src.js+"**/*", ['frontend.js']);
     gulp.watch(path.src.html, ['frontend.html']);
+    gulp.watch(path.src.font+"**/*", ['frontend.font']);
 });
 
 function swallowError (error) {
