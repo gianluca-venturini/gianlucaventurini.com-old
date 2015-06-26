@@ -6667,8 +6667,11 @@ div.about {
 }
 div.personal-image {
   margin-top: 60px;
-  padding: 5%;
+  padding: 4%;
   height: 100%;
+}
+div.personal-image img {
+  border: solid white 5px;
 }
 div.projects {
   background-color: #d0e4f2;
