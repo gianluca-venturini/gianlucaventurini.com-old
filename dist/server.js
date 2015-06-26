@@ -29,6 +29,7 @@ app.get('/', function (req, res) {
         db.project.find({}, function(err, projects) {
             res.render('index', {
                 mail: staticConfig.mail,
+                about: staticConfig.about,
                 social: staticConfig.social,
                 projects: projects
             });
