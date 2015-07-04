@@ -6734,3 +6734,9 @@ a.social:hover {
   transition: color 0.7s ease;
   color: #79c0f2;
 }
+div.project_page {
+  padding: 30px 30px 60px 30px;
+}
+div.project-photos {
+  margin-top: 70px;
+}
