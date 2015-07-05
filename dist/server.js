@@ -48,7 +48,7 @@ app.get('/', function (req, res) {
 
 app.get('/project/:project_title', function(req, res) {
 
-    var re = new RegExp(req.params.project_title, "i");
+    var re = new RegExp("^" + req.params.project_title + "$", "i");
     db.project.find({title: re}, function(err, projects) {
 
         if(projects.length > 1) {
