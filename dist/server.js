@@ -68,8 +68,6 @@ app.get('/project/:project_title', function(req, res) {
 
 });
 
-console.log(__dirname);
-
 app.listen(3000);
 
 console.log('Application Started on http://localhost:3000/');

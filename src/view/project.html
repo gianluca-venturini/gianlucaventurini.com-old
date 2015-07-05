@@ -13,6 +13,9 @@
                 <h4 class="project-role">{{project.role}}</h4>
             {% endif %}
             <p class="project-description">{{project.description}}</p>
+            <a href="/project/{{project.title}}" class="more">
+                <span class="more">More</span><span class="more-arrow">&#xe75e;</span>
+            </a>
 
             {% if project.demo != undefined %}
             <div class="visible-md visible-lg btn-container">
