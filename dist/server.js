@@ -22,15 +22,14 @@ var connectionString = "gianlucaventurini"; // "username:password@example.com/my
 var collections = ["static", "project"];
 var db = mongojs(connectionString, collections);
 
-/* Decomment when they'll fix the bug
 db.on('error',function(err) {
-    console.log('database error', err);
+    console.log('Database error', err);
+    process.exit(1);
 });
 
 db.on('ready',function() {
-    console.log('database connected');
+    console.log('Database connected');
 });
-*/
 
 app.get('/', function (req, res) {
     db.static.find({}, function(err, statics) {
