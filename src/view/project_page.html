@@ -18,10 +18,10 @@
             <h2 class="project-title">{{project.title}}</h2>
 
             <div class="row" style="margin-top: 50px;">
-                <div class="col-md-8 col-md-push-4 col-sm-8 col-sm-push-4">
+                <div class="col-md-8 col-sm-8 col-md-offset-2 col-sm-offset-2">
                     <!-- project role -->
                     {% if project.role != undefined  %}
-                    <h4 class="project-role">{{project.role}}</h4>
+                    <h4 class="project-role" style="margin-top: 70px;">{{project.role}}</h4>
                     {% endif %}
 
                     <!-- project description -->
@@ -35,7 +35,7 @@
 
                     <!-- button in md and lg -->
                     {% if project.demo != undefined %}
-                    <div class="visible-md visible-lg btn-container">
+                    <div class="visible-md visible-lg btn-container" style="margin-top: 70px;">
                         <a href="{{project.demo}}" class="btn btn-flat btn-margin btn-center btn-color-hover">
                             VISIT WEBSITE
                         </a>
@@ -43,12 +43,6 @@
                     {% endif %}
                 </div>
 
-                <!-- main image -->
-                {% if project.image != undefined %}
-                <div class="col-md-4 col-md-pull-8 col-sm-4 col-sm-pull-8 project-image-container ">
-                    <img src="/img/{{project.image}}" class="img-responsive" alt="{{project.title.toLowerCase()}} photo"/>
-                </div>
-                {% endif %}
             </div>
 
             <!-- Other photos -->

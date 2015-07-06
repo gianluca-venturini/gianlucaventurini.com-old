@@ -6714,9 +6714,11 @@ div.project {
   }
 }
 a.more {
+  position: absolute;
   transition: color 0.7s ease;
-  color: #79c0f2;
-  text-align: left;
+  color: #5d7099;
+  right: 0;
+  margin-right: 10px;
 }
 a.more:hover {
   transition: color 0.7s ease;
