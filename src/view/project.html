@@ -8,17 +8,17 @@
 <div class="project">
     <div class="row">
         <div class="col-md-4 col-md-offset-2 col-md-push-4 col-sm-4 col-sm-offset-2 col-sm-push-4">
-            <h3 class="project-title">{{project.title}}</h3>
+            <h3 class="project-title wow fadeInDown">{{project.title}}</h3>
             {% if project.role != undefined  %}
-                <h4 class="project-role">{{project.role}}</h4>
+                <h4 class="project-role wow fadeInLeft">{{project.role}}</h4>
             {% endif %}
-            <p class="project-description">{{project.description}}</p>
-            <a href="/project/{{ project.title }}" class="more">
+            <p class="project-description wow fadeInLeft">{{project.description}}</p>
+            <a href="/project/{{ project.title }}" class="more wow fadeInRight">
                 <span class="more">More</span><span class="more-arrow">&#xe75e;</span>
             </a>
 
             {% if project.demo != undefined %}
-            <div class="visible-md visible-lg btn-container">
+            <div class="visible-md visible-lg btn-container wow fadeInUp">
                 <a href="{{ project.demo }}" class="btn btn-flat btn-margin btn-center btn-color-hover">
                     VISIT WEBSITE
                 </a>
@@ -27,7 +27,7 @@
         </div>
 
         {% if project.image != undefined %}
-            <div class="col-md-4 col-md-pull-4 col-sm-4 col-sm-pull-4 project-image-container ">
+            <div class="col-md-4 col-md-pull-4 col-sm-4 col-sm-pull-4 project-image-container wow fadeInLeft">
                 <img src="img/{{ project.image }}" class="img-responsive" alt="Macbook silver"/>
             </div>
         {% endif %}
@@ -48,17 +48,17 @@
 <div class="project">
     <div class="row">
         <div class="col-md-4 col-md-offset-2 col-sm-4 col-sm-offset-2">
-            <h3 class="project-title">{{ project.title }}</h3>
+            <h3 class="project-title wow fadeInDown">{{ project.title }}</h3>
             {% if project.role != undefined  %}
-                <h4 class="project-role">{{ project.role }}</h4>
+                <h4 class="project-role wow fadeInRight">{{ project.role }}</h4>
             {% endif %}
-            <p class="project-description">{{ project.description }}</p>
-            <a href="/project/{{ project.title }}" class="more">
+            <p class="project-description wow fadeInRight">{{ project.description }}</p>
+            <a href="/project/{{ project.title }}" class="more wow fadeInRight">
                 <span class="more">More</span><span class="more-arrow">&#xe75e;</span>
             </a>
 
             {% if project.demo != undefined  %}
-            <div class="visible-md visible-lg btn-container">
+            <div class="visible-md visible-lg btn-container wow fadeInUp">
                 <a href="{{ project.demo }}" class="btn btn-flat btn-margin btn-center btn-color-hover">
                     VISIT WEBSITE
                 </a>
@@ -67,7 +67,7 @@
         </div>
 
         {% if project.image != undefined %}
-            <div class="col-md-4 col-sm-4 project-image-container">
+            <div class="col-md-4 col-sm-4 project-image-container wow fadeInRight">
                 <img src="img/{{ project.image }}" class="img-responsive" alt="Macbook silver"/>
             </div>
         {% endif %}

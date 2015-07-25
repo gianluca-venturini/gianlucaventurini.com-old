@@ -17,6 +17,12 @@ app.use('/font', express.static(__dirname +'/font'));
 app.use('/img', express.static(__dirname +'/img'));
 app.use('/js', express.static(__dirname +'/js'));
 
+// Robots.txt
+app.get('/robots.txt', function (req, res) {
+    res.type('text/plain');
+    res.send("User-agent: *\nDisallow: /");
+});
+
 // MongoDB resources
 var connectionString = "gianlucaventurini"; // "username:password@example.com/mydb"
 var collections = ["static", "project"];
